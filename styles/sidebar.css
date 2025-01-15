@@ -1,0 +1,32 @@
+.sidebar {
+    position: fixed; /* Fixed position so that it stays in place when scrolling */
+    left: 0;
+    bottom: 0;
+    top: 55px; /* Adjusted to make space for the header */
+    width: 72px;
+    z-index: 200; /* Ensures that the sidebar is on top of other elements */
+    padding-top: 5px;
+    background-color: white;
+}
+
+.sidebar-link {
+    height: 74px;
+    display: flex;
+    justify-content: center; /* Aligns items to the center of the container horisontally */
+    align-items: center; /* Aligns items to the center of the container vertically */
+    flex-direction: column; /* Makes the flex items stack vertically */
+    cursor: pointer;
+}
+
+.sidebar-link:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.sidebar-link img { /* Targets all images within the sidebar-link class */
+    width: 24px;
+    margin-bottom: 6.5px;
+}
+
+.sidebar-link div { /* Targets all divs within the sidebar-link class */
+    font-size: 10px;
+}

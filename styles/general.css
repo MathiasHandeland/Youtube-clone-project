@@ -1,0 +1,13 @@
+p {
+    margin-top: 0;  /* Removes the default margin */
+    margin-bottom: 0; /* Removes the default margin */
+}
+
+body {
+    font-family: 'Roboto', Arial;
+    margin: 0; /* Removes the default margin */
+    padding-top: 80px; /* Adds space for the header */
+    padding-left: 96px; /* Adds space for the sidebar */
+    padding-right: 24px; /* Adds space for the sidebar */
+    background-color: rgb(249, 249, 249)
+}

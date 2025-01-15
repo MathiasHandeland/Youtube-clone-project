@@ -1,0 +1,190 @@
+.header {
+    height: 55px;
+    
+    display: flex;
+    justify-content: space-between; /* Aligns items to the start and end of the container */
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    background-color: white;
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(228, 228, 228);
+
+    z-index: 100; /* Ensures that the header is on top of other elements */
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+.hamburger-menu {
+    height: 24px;
+    margin-left: 24px;
+    margin-right: 24px;
+    cursor: pointer;
+    transition: background-color 0.15s, padding 0.15s; /* Adds smooth transition */
+}
+
+.hamburger-menu:hover {
+    background-color: rgb(230, 230, 230);
+    border-radius: 50%; /* Makes the background a circle */
+    padding: 6px; /* Adds padding to make the circle bigger */
+    box-sizing: content-box; /* Ensures padding is added outside the element's size */
+}
+
+.youtube-logo {
+    height: 20px;
+    cursor: pointer;
+}
+
+.middle-section {
+    flex: 1; /* Takes up the remaining space */
+    margin-left: 70px;
+    margin-right: 35px;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    flex: 1;
+    height: 36px;
+    padding-left: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 20px 0 0 20px;
+    box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.015);
+    width: 0; /* Makes the search bar shrink */
+}
+
+.search-bar::placeholder {
+    font-size: 16px;
+}
+
+.search-button {
+    height: 40px;
+    width: 65px;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 0 20px 20px 0;
+    margin-left: -1px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.search-button,
+.voice-search-button,
+.upload-icon-container,
+.apps-icon-container,
+.notification-icon-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    position: relative;
+}
+    
+
+.search-button .tooltip,
+.voice-search-button .tooltip,
+.upload-icon-container .tooltip,
+.apps-icon-container .tooltip,
+.notification-icon-container .tooltip { /* Targets tooltips within the search button */
+    position: absolute;
+    background-color: gray;
+    color: white;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 2px;
+    font-size: 12px;
+    bottom: -30px;
+    opacity: 0; /* Hides the tooltip */ 
+    transition: opacity 0.15s;
+    pointer-events: none; /* Prevents the tooltip from being interactive */
+    white-space: nowrap; /* Prevents the tooltip from wrapping */
+}
+
+
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.upload-icon-container:hover .tooltip,
+.apps-icon-container:hover .tooltip,
+.notification-icon-container:hover .tooltip { 
+    opacity: 1; /* Shows the tooltip */
+}
+
+.search-button:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+.search-icon {
+    height: 25px;
+}
+
+.voice-search-button {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(245, 245, 245);
+    cursor: pointer;
+}
+
+.voice-search-icon {
+    height: 24px;
+}
+
+.right-section {    
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 20px;
+    flex-shrink: 0; /* Prevents the element from shrinking */
+}
+
+.upload-icon {
+    height: 24px;
+    cursor: pointer;
+}
+
+.youtube-apps-icon {
+    height: 24px;
+    cursor: pointer;
+}
+
+.current-user-picture {
+    height: 32px;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.notification-icon {
+    height: 24px;
+    cursor: pointer;
+}
+
+.notification-icon-container {
+    position: relative;
+}
+
+.notification-count {
+    position: absolute;
+    top: -1px;
+    right: -3px;
+    background-color: rgb(200, 0, 0);
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 10px;
+}
